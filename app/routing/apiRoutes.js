@@ -3,6 +3,9 @@ var friends = require("../data/friends");
 // ROUTING
 module.exports = function(app) {
   // API GET Requests
+  app.get("/", function(req, res) {
+    res.json(path.join(__dirname, "public/index.html"));
+  });
 
   app.get("/api/friends", function(req, res) {
     res.json(friends);
